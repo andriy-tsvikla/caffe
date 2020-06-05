@@ -145,7 +145,7 @@ endif()
 
 # ---[ Python
 if(BUILD_python)
-  message(STATUS "BUILD_python -- FALSE")
+  message(STATUS "BUILD_python -- TRUE")
   if(NOT "${python_version}" VERSION_LESS "3.0.0")
     message(STATUS "BUILD_python -- Python3")
     # use python3
