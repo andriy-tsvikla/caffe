@@ -145,7 +145,9 @@ endif()
 
 # ---[ Python
 if(BUILD_python)
+  message(STATUS "BUILD_python -- FALSE")
   if(NOT "${python_version}" VERSION_LESS "3.0.0")
+    message(STATUS "BUILD_python -- Python3")
     # use python3
     find_package(PythonInterp 3.0)
     find_package(PythonLibs 3.0)
@@ -173,6 +175,7 @@ if(BUILD_python)
       find_package(Boost 1.46 COMPONENTS python)
     endif()
   else()
+    message(STATUS "BUILD_python -- Python2")
     # disable Python 3 search
     find_package(PythonInterp 2.7)
     find_package(PythonLibs 2.7)
@@ -202,6 +205,8 @@ if(BUILD_python)
       list(APPEND Caffe_LINKER_LIBS PRIVATE ${PYTHON_LIBRARIES} PUBLIC ${Boost_LIBRARIES})
     endif()
   endif()
+else()
+    message(STATUS "BUILD_python -- FALSE")
 endif()
 
 # ---[ Matlab
