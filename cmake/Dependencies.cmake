@@ -147,6 +147,7 @@ set(BUILD_python TRUE)
 # ---[ Python
 if(BUILD_python)
   message(STATUS "BUILD_python -- TRUE")
+  message(STATUS "Python version ${python_version}")
   if(NOT "${python_version}" VERSION_LESS "3.0.0")
     message(STATUS "BUILD_python -- Python3")
     # use python3
