@@ -99,7 +99,7 @@ function(caffe_print_configuration_summary)
   caffe_merge_flag_lists(__flags_deb CMAKE_CXX_FLAGS_DEBUG   CMAKE_CXX_FLAGS)
 
   caffe_status("")
-  caffe_status("******************* Caffe Configuration Summary *******************")
+  caffe_status("******************* Caffe Configuration Summary modified *******************")
   caffe_status("General:")
   caffe_status("  Version           :   ${CAFFE_TARGET_VERSION}")
   caffe_status("  Git               :   ${Caffe_GIT_VERSION}")
