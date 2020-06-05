@@ -143,7 +143,7 @@ elseif(APPLE)
   endif()
 endif()
 
-set(BUILD_python TRUE)
+
 # ---[ Python
 if(BUILD_python)
   message(STATUS "BUILD_python -- TRUE")
