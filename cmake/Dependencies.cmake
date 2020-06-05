@@ -153,7 +153,8 @@ if(BUILD_python)
   # use python3
   find_package(PythonInterp 3.0)
   find_package(PythonLibs 3.0)
-  find_package(NumPy 1.7.1)
+  #find_package(NumPy 1.7.1)
+  find_package(NumPy 1.8.5)
   # Find the matching boost python implementation
   set(version ${PYTHONLIBS_VERSION_STRING})
 
