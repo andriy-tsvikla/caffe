@@ -94,7 +94,7 @@ function(caffe_select_nvcc_arch_flags out_variable)
 
   # set CUDA_ARCH_NAME strings (so it will be seen as dropbox in CMake-Gui)
   #set(CUDA_ARCH_NAME ${__archs_name_default} CACHE STRING "Select target NVIDIA GPU achitecture.")
-  set(CUDA_ARCH_NAME "Turing" CACHE STRING "Select target NVIDIA GPU achitecture.")
+  set(CUDA_ARCH_NAME "Turing")
   message(STATUS "1 CUDA_ARCH_NAME: ${CUDA_ARCH_NAME}")
   set_property( CACHE CUDA_ARCH_NAME PROPERTY STRINGS "" ${__archs_names} )
   message(STATUS "2 CUDA_ARCH_NAME: ${CUDA_ARCH_NAME}")
