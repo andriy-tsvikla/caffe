@@ -94,7 +94,8 @@ function(caffe_select_nvcc_arch_flags out_variable)
   set(CUDA_ARCH_NAME ${__archs_name_default} CACHE STRING "Select target NVIDIA GPU achitecture.")
   set_property( CACHE CUDA_ARCH_NAME PROPERTY STRINGS "" ${__archs_names} )
   mark_as_advanced(CUDA_ARCH_NAME)
-
+  
+  message(STATUS "CUDA_ARCH_NAME: ${CUDA_ARCH_NAME}")
   # verify CUDA_ARCH_NAME value
   if (NOT ";${__archs_names};" MATCHES ";${CUDA_ARCH_NAME};")
     string(REPLACE ";" ", " __archs_names "${__archs_names}")
